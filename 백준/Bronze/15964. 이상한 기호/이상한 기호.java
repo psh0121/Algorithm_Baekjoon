@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Main {
@@ -5,9 +6,9 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		int A = sc.nextInt();
-		int B = sc.nextInt();
+		BigInteger A = sc.nextBigInteger();
+		BigInteger B = sc.nextBigInteger();
 		
-		System.out.println((A+B)*(A-B));
+		System.out.println((A.add(B)).multiply(A.subtract(B)));
 	}
 }         
