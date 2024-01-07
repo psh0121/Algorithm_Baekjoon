@@ -8,6 +8,6 @@ public class Main {
 		sc.nextInt();
 		sc.nextInt();
 		
-		System.out.println(sc.nextInt() * sc.nextInt());
+		System.out.println(sc.nextBigInteger().multiply(sc.nextBigInteger()));
 	}
 }         
