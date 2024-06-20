@@ -10,20 +10,17 @@ public class Main {
 		int b = sc.nextInt();
 		int c = sc.nextInt();
 
-		int day7 = a * 7 + b;
+		int days = 0;
+		int totalCoins = 0;
 
-		if(b == 0) {
-			System.out.println((int)Math.ceil((double)c / a));
-		}
-		else if(c / day7 >= 1) {
-			int week = c / day7;
-			int day = c % day7;
+		while (totalCoins < c) {
+			totalCoins += a;
+			days++;
 
-			System.out.println(week * 7 + day);
+			if(days % 7 == 0) totalCoins += b;
 		}
-		else {
-			System.out.println((int)Math.ceil((double)c / a));
-		}
+
+		System.out.println(days);
 		sc.close();
     }
 }
