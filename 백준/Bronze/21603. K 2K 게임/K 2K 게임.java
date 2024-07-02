@@ -15,7 +15,7 @@ public class Main {
 			String strI = Integer.toString(i);
 			int oneI = Integer.parseInt(String.valueOf(strI.charAt(strI.length() - 1)));
 
-			if(oneI != numK && oneI != 2 * numK) {
+			if(oneI != numK && oneI != (2 * numK) % 10) {
 				cnt++;
 				result += i + " ";
 			}
