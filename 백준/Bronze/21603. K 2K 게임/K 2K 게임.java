@@ -9,7 +9,7 @@ public class Main {
 		int numK = Integer.parseInt(String.valueOf(k.charAt(k.length() - 1)));
 
 		int cnt = 0;
-		String result = "";
+		StringBuilder result = new StringBuilder();
 
 		for(int i = 1; i <= n; i++) {
 			String strI = Integer.toString(i);
@@ -17,12 +17,12 @@ public class Main {
 
 			if(oneI != numK && oneI != (2 * numK) % 10) {
 				cnt++;
-				result += i + " ";
+				result.append(i).append(" ");
 			}
 		}
 
 		System.out.println(cnt);
-		System.out.println(result);
+		if(cnt > 0) System.out.println(result.toString().trim());
 		
 		sc.close();
     }
