@@ -1,13 +1,14 @@
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		long a = sc.nextInt();
-		long b = sc.nextInt();
-		long c = sc.nextInt();
+		BigDecimal a = sc.nextBigDecimal();
+		BigDecimal b = sc.nextBigDecimal();
+		BigDecimal c = sc.nextBigDecimal();
 
-		System.out.println((double)(a * b) / (double)c);
+		System.out.println(a.multiply(b).divide(c, 10, BigDecimal.ROUND_HALF_UP));
 		sc.close();
     }
 }
