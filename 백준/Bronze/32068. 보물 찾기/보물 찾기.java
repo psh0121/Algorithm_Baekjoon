@@ -10,24 +10,12 @@ public class Main {
 			int r = sc.nextInt();
 			int s = sc.nextInt();
 
-			int level = 0;
-
-			while (true) {
-				level++;
-
-				if(level % 2 == 1) {
-					s += level;
-				}
-				else {
-					s -= level;
-				}
-
-				if(s == l || s == r) {
-					break;
-				}
+			if(Math.abs(s-l) < Math.abs(s-r)) {
+				System.out.println(Math.abs(s-l) * 2 + 1);
 			}
-
-			System.out.println(level + 1);
+			else {
+				System.out.println(Math.abs(s-r) * 2);
+			}
 		}
 		sc.close(); 
     }
