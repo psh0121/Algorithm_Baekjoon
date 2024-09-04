@@ -15,21 +15,29 @@ public class Main {
 		long time1 = k;
 		long result1 = 0;
 
-		time1 -= a;
-		result1 += time1 * x;
+		if(a < time1) {
+			time1 -= a;
+			result1 += time1 * x;
 
-		time1 -= b;
-		result1 += time1 * y;
+			if(b < time1) {
+				time1 -= b;
+				result1 += time1 * y;
+			}
+		}
 
 		// case2 2 -> 1
 		long time2 = k;
 		long result2 = 0;
 
-		time2 -= b;
-		result2 += time2 * y;
+		if(b < time2) {
+			time2 -= b;
+			result2 += time2 * y;
 
-		time2 -= a;
-		result2 += time2 * x;
+			if(a < time2) {
+				time2 -= a;
+			result2 += time2 * x;
+			}
+		}
 
 		System.out.println(Math.max(result1, result2));
 		sc.close();
