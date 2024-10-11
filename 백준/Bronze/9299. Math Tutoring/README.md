@@ -1,10 +1,10 @@
-# [Bronze III] Math Tutoring - 9299 
+# [Bronze II] Math Tutoring - 9299 
 
 [문제 링크](https://www.acmicpc.net/problem/9299) 
 
 ### 성능 요약
 
-메모리: 77904 KB, 시간: 1600 ms
+메모리: 36856 KB, 시간: 908 ms
 
 ### 분류
 
@@ -12,7 +12,7 @@
 
 ### 제출 일자
 
-2024년 5월 1일 23:50:32
+2024년 10월 11일 09:40:49
 
 ### 문제 설명
 
