@@ -1,15 +1,12 @@
 import java.util.Scanner;
 
 public class Main {
-
-	public static void main(String[] args) {
-
+    public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
-		String[] strArr = sc.next().split("-");
+		String[] date = sc.next().split("-");
+		int number = Integer.parseInt(date[1] + date[2]);
 		String result = "";
-		
-		int number = Integer.parseInt(strArr[1] + strArr[2]);
-		
+
 		if(number >= 321 && number <= 419) result = "Aries";
 		else if(number >= 420 && number <= 520) result = "Taurus";
 		else if(number >= 521 && number <= 620) result = "Gemini";
@@ -24,6 +21,6 @@ public class Main {
 		else result = "Capricorn";
 		
 		System.out.println(result);
-	}
+		sc.close();
+    }
 }
-
