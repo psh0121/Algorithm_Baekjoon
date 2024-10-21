@@ -8,29 +8,21 @@ public class Main {
 		int c = sc.nextInt();
 		int n = sc.nextInt();
 
-		n %= c;
+		boolean possible = false;
+		for(int i = 0; i <= n / a; i++) {
+			for(int j = 0; j <= n / b; j++) {
+				for(int k = 0; k <= n / c; k++) {
+					if(a*i + b*j + c*k == n) {
+						possible = true;
+						break;
+					}
+				}
+				if(possible) break;
+			}
+			if(possible) break;
+		}
 
-		if(n == 0){
-			System.out.println(1);
-			return;
-		} 
-
-		n %= b;
-
-		if(n == 0){
-			System.out.println(1);
-			return;
-		} 
-
-		n %= a;
-
-		if(n == 0){
-			System.out.println(1);
-			return;
-		} 
-
-		System.out.println(0);
-
+		System.out.println(possible ? 1 : 0);
 		sc.close();
     }
 }
