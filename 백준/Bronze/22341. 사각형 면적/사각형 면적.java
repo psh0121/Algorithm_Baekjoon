@@ -14,12 +14,14 @@ public class Main {
       int a = sc.nextInt();
       int b = sc.nextInt();
 
-      // 가로면적, 세로면적
-      int wCutS = w * b;
-      int hCutS = h * a;
+      if(a >= h || b >= w) continue;
 
-      if(hCutS > wCutS) w = a;
-      else h = b;
+      // 가로면적, 세로면적
+      int wCutS = w * a;
+      int hCutS = h * b;
+
+      if(hCutS > wCutS) w = b;
+      else h = a;
     }
 
     System.out.println(w * h);
