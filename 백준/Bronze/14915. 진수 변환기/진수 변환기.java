@@ -6,7 +6,7 @@ public class Main {
     int m = sc.nextInt();
     int n = sc.nextInt();
 
-    String value = Integer.toUnsignedString(m, n);
+    String value = Integer.toString(m, n);
     System.out.println(value.toUpperCase());
 		sc.close();
     }
