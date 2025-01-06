@@ -8,7 +8,7 @@ public class Main {
         int n = sc.nextInt();
         ArrayList<String> list = new ArrayList<>(Arrays.asList("SciComLove".split("")));
 
-        for(int i = 0; i < n; i++) {
+        for(int i = 0; i < n % 10; i++) {
           list.add(list.remove(0));
         }
 
