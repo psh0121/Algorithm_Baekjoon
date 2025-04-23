@@ -1,36 +1,21 @@
-import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Main {
     public static void solve (Scanner sc) {
         int n = sc.nextInt();
-        int[] arr = new int[n];
-        for(int i = 0; i < n; i++) arr[i] = sc.nextInt();
-        Arrays.sort(arr);
+        Set<Integer> set = new HashSet<>();
+        for(int i = 0; i < n; i++) set.add(sc.nextInt());
 
-        String result = "No";
-        boolean breakFlag = false;
-        
-        for(int i = 0; i < n; i++) {
-            for(int j = i+1; j < n; j++) {
-                if(arr[j] - arr[i] != 3) continue;
-
-                for(int k= j+1; k < n; k++) {
-                    if(arr[k] - arr[j] != 3) continue;
-                    else {
-                        result = "Yes";
-                        breakFlag = true;
-                        break;
-                    }
-                }
-
-                if(breakFlag) break;
+        for(int x : set) {
+            if(set.contains(x+3) && set.contains(x+6)) {
+                System.out.println("Yes");
+                return;
             }
-
-            if(breakFlag) break;
         }
 
-        System.out.println(result);
+        System.out.println("No");
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
